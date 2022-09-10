@@ -1,0 +1,14 @@
+﻿@if (Context.Session.GetString("userType") == "Employee" || Context.Session.GetString("userType") == "Non-Employee")
+{
+    <form method="post" class="form-inline" asp-page="/Index" asp-page-handler="MyOnClick">
+        <a class="btn btn-link" asp-area="" asp-page="/EmployeeSignUp/EmployeeSignUp">NewProfile</a>
+        <button type="submit" class="btn btn-link">Logout</button>
+    </form>
+    @functions {
+        public void OnGetMyOnClick() => Context.Session.Clear();
+    }
+}
+else{
+    <a class="btn btn-link" asp-page="/Login/Login">Login</a>
+    <a class="btn btn-link" asp-page="/SignUp/SignUp">SignUp</a>
+}

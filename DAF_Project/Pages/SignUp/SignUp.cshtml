@@ -1,0 +1,65 @@
+﻿@page
+@model DAF_Project.Pages.SignUp.SignUpModel
+@{
+    ViewData["Title"] = "Sign-Up page";
+}
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss='alert' aria-label="Close"></button>
+    </div>
+}
+
+<div class="border rounded p-5" style="background-color:orange">
+    <h1 style="color:purple">Register</h1>
+    <h3 style="color:purple">Create a new account</h3>
+    <form method="POST">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">First Name</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="firstName" value="@Model.firstName" style="border:2px solid purple" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">Last Name</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="lastName" value="@Model.lastName" style="border:2px solid purple" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">Create User Name</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="userName" value="@Model.userName" style="border:2px solid purple"/>
+            </div>
+        </div>
+        <!--<div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">User Type</label>
+            <div class="col-sm-2">
+                <select name="type" style="border:2px solid orange">
+                    <option style="color:purple">Non-Employee</option>
+                    <option style="color:purple">Employee</option>
+                </select>
+            </div>
+        </div>
+        -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">Password</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="password" style="border:2px solid purple" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" style="color:purple">Confirm Password</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="cpassword" style="border:2px solid purple" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-6">
+                <button type="submit" class="btn" style="background-color:purple;color:white">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
