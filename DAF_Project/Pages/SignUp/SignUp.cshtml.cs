@@ -64,9 +64,8 @@ namespace DAF_Project.Pages.SignUp
                 return;
             }
 
-            // show success message and redirect back to login page
-            successMessage = "New profile added successfully";
-            Response.Redirect("/Login/Login");
+            // show success message
+            successMessage = "New profile created successfully, go to login page and use new created user name and password";
         }
         public string HashPassword(string password)
         {

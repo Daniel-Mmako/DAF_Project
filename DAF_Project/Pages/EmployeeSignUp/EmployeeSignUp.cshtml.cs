@@ -64,8 +64,7 @@ namespace DAF_Project.Pages.EmployeeSignUp
             }
 
             // show success message and redirect back to login page
-            successMessage = "New profile added successfully";
-            Response.Redirect("/Login/Login");
+            successMessage = "New employee profile created successfully";
         }
         public string HashPassword(string password)
         {

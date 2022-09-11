@@ -1,4 +1,49 @@
 ﻿@page
 @model DAF_Project.Pages.Allocate.AllocateModel
 @{
+    ViewData["Title"] = "Allocate page";
 }
+
+<div class="container-fluid border rounded p-5" style="background-color:orange">
+    <h2 style="color:purple">Allocate to an active disaster</h2>
+    <div class="row content">
+        <div class="col-sm-9">
+            <form method="POST">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" style="color:purple">Disaster</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" name="start_date" value="@Model.disaster" style="border:2px solid purple" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" style="color:purple">Money</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" name="end_date" value="@Model.amount" style="border:2px solid purple" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" style="color:purple">Goods</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="location" value="@Model.numOfGoods" style="border:2px solid purple" />
+                    </div>
+                </div>
+                @if (Model.successMessage.Length > 0)
+                {
+                    <div class="row mb-3">
+                        <div class="col-sm-9">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>@Model.successMessage</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn" style="background-color:purple;color:white">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

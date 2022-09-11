@@ -28,3 +28,15 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+// show new input if new category is to be entered
+function changeStatus() {
+    let status = document.getElementById("currentCategory");
+    if (status.value=="Add-New-Item") {
+        document.getElementById("new-cat").style.visibility = "visible";
+        document.getElementById("new-cat").hidden = false;
+    } else {
+        document.getElementById("new-cat").style.visibility = "hidden";
+        document.getElementById("new-cat").hidden = true;
+    }
+}

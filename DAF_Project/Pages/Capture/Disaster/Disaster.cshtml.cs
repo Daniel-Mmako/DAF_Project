@@ -1,4 +1,4 @@
-//using DAF_Project.Models;
+using DAF_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -6,17 +6,18 @@ namespace DAF_Project.Pages.Capture.CaptureDisaster
 {
     public class CaptureDisasterModel : PageModel
     {
-        //private readonly db_donationsContext _context;
+        private readonly db_donationsContext _context;
         public String newStartDate = "";
         public String newEndDate = "";
         public String newLocation = "";
         public String newDescription = "";
         public String newType = "";
         public String errorMessage = "";
-        //public CaptureDisasterModel(db_donationsContext context)
-        //{
-        //    _context = context;
-        //}
+        public String successMessage = "";
+        public CaptureDisasterModel(db_donationsContext context)
+        {
+            _context = context;
+        }
         public void OnGet()
         {
         }
@@ -30,25 +31,24 @@ namespace DAF_Project.Pages.Capture.CaptureDisaster
 
             try
             {
-                //var disaster = new Models.Disaster
-                //{
-                //    StartDate = Convert.ToDateTime(newStartDate).Date,
-                //    EndDate = Convert.ToDateTime(newEndDate).Date,
-                //    Location = newLocation,
-                //    Description = newDescription,
-                //    Type = newType
-                //};
+                var disaster = new Models.Disaster
+                {
+                    StartDate = Convert.ToDateTime(newStartDate).Date,
+                    EndDate = Convert.ToDateTime(newEndDate).Date,
+                    Location = newLocation,
+                    Description = newDescription,
+                    Type = newType
+                };
 
-                //_context.Add(disaster);
-                //_context.SaveChanges();
+                _context.Add(disaster);
+                _context.SaveChanges();
             }
             catch (Exception ex)
             {
                 errorMessage = ex.Message;
                 return;
             }
-
-            Response.Redirect("/Index");
+            successMessage = "captured successfully!";
         }
     }
 }
