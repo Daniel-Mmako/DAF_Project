@@ -1,7 +1,4 @@
-﻿@{
-    //var x = Context.Session.GetString("test");
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,8 +25,9 @@
                             <a class="btn btn-link" asp-area="" asp-page="/Capture/Monetary/Monetary">Monetary</a>
                             <a class="btn btn-link" asp-area="" asp-page="/Capture/Goods/Goods">Goods</a>
                             <a class="btn btn-link" asp-area="" asp-page="/Capture/Disaster/Disaster">Disaster</a>
-                            <a class="btn btn-link" asp-area="" asp-page="/Allocate/Allocate">Allocate</a>
                             <a class="btn btn-link" asp-area="" asp-page="/ViewAll/View">View</a>
+                            <a class="btn btn-link" asp-area="" asp-page="/Allocate/Allocate">Allocate</a>
+                            <a class="btn btn-link" asp-area="" asp-page="/Purchase/Purchase">Purchase</a>
                         }
                         else if (Context.Session.GetString("userType") == "Non-Employee")
                         {
@@ -51,9 +49,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color:orange">
+    <footer class="border-top footer text-muted text-center" style="background-color:orange">
         <div class="container">
-            &copy; 2022 - DAF_Project - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - DisasterAlleviationFoundation
         </div>
     </footer>
 

@@ -1,0 +1,39 @@
+﻿@page
+@model DAF_Project.Pages.Purchase.PurchaseModel
+@{
+    ViewData["Title"] = "Purchase goods page";
+}
+
+<div class="border rounded p-5" style="background-color:orange">
+    <h2 style="color:purple">You have a maximum of R @Model.availableAmount to purchase goods</h2>
+    <form method="POST">
+        <div class="row mb-3">
+            <label class="col-sm-1 col-form-label" style="color:purple">Price</label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" name="name" value="@Model.price" style="border:2px solid purple" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-1 col-form-label" style="color:purple">Goods</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="password" value="@Model.goods" style="border:2px solid purple" />
+            </div>
+        </div>
+        @if (Model.successMessage.Length > 0)
+        {
+            <div class="row mb-3">
+                <div class="col-sm-9">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>@Model.successMessage</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="row mb-3">
+            <div class="col-sm-6">
+                <button type="submit" class="btn" style="background-color:purple;color:white">Purchase</button>
+            </div>
+        </div>
+    </form>
+</div>

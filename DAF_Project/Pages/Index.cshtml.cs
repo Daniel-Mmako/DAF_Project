@@ -10,8 +10,7 @@ namespace DAF_Project.Pages
         private readonly db_donationsContext _context;
         public dynamic? money;
         public dynamic? goods;
-        public dynamic? disaster;
-        public 
+        public dynamic? disaster; 
         public IndexModel(ILogger<IndexModel> logger, db_donationsContext context)
         {
             _logger = logger;

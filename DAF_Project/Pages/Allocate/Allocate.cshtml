@@ -12,19 +12,19 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label" style="color:purple">Disaster</label>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control" name="start_date" value="@Model.disaster" style="border:2px solid purple" />
+                        <select asp-items="Model.Options"></select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label" style="color:purple">Money</label>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control" name="end_date" value="@Model.amount" style="border:2px solid purple" />
+                        <input type="number" class="form-control" name="amount" value="@Model.amount" style="border:2px solid purple" />
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label" style="color:purple">Goods</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="location" value="@Model.numOfGoods" style="border:2px solid purple" />
+                        <input type="text" class="form-control" name="goods" value="@Model.numOfGoods" style="border:2px solid purple" />
                     </div>
                 </div>
                 @if (Model.successMessage.Length > 0)
