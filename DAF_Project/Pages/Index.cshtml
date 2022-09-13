@@ -87,12 +87,14 @@
     </div>
 
     <div class="mySlides">
-        We have received R @Model.money donations as of date<br />
-        We have received @Model.goods goods donations as of date 
+        <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">We have received R @Model.money donations as of date</h2>
+        <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">We have received @Model.goods goods donations as of date</h2>
     </div>
 
     <div class="mySlides">
-       
+       <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">@Model.disaster</h2>
+       <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">This disaster has been allocated R @Model.disasterMoney in donations</h2>
+       <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">This disaster has received the following goods: @Model.disasterGoods donations</h2>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>

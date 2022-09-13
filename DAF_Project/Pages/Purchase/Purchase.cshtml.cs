@@ -20,11 +20,33 @@ namespace DAF_Project.Pages.Purchase
         }
         public void OnGet()
         {
-            availableAmount = _context.Monetaries.Select(e => e.Amount).Sum();
-            Options = _context.Goods.Select(e => new SelectListItem
+            try
             {
-                Text = e.Category,
-            }).ToList();
+                availableAmount = _context.Monetaries.Select(e => e.Amount).Sum();
+                Options = _context.Goods.Select(e => new SelectListItem
+                {
+                    Text = e.Category,
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        public void OnPost()
+        {
+            try
+            {
+                price = Convert.ToDecimal(Request.Form["price"]);
+                numOfItems = (int)Convert.ToInt64(Request.Form["number_of_items"]);
+                goods = Request.Form["goods"];
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

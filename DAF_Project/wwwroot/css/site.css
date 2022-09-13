@@ -24,6 +24,7 @@ a:hover {
 .btn-link {
     text-decoration: none;
     color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .btn:hover {

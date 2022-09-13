@@ -5,43 +5,43 @@
 }
 
 <div class="container-fluid border rounded p-5" style="background-color:orange">
-    <h2 style="color:purple">Capture new goods</h2>
+    <h2 style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Capture new goods</h2>
     <div class="row content">
         <div class="col-sm-9">
             <form method="POST">
                     <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">Date</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Date</label>
                     <div class="col-sm-6">
                         <input type="date" class="form-control" name="date" value="@Model.newDate" style="border:2px solid purple" />
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">No. of items</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">No. of items</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="number_of_items" value="@Model.newNumberOfItems" style="border:2px solid purple" />
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">Category</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Category</label>
                     <div class="col-sm-6">
                         <select id="currentCategory" name="type" style="border:2px solid purple" onchange="changeStatus()" value="@Model.newCategory" asp-items="Model.Options">
                         </select>
                     </div>
                 </div>
                 <div class="row mb-3" id="new-cat" hidden>
-                    <label class="col-sm-3 col-form-label" style="color:purple">New Category</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">New Category</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="category" value="@Model.newCategory" style="border:2px solid purple" />
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">Description</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Description</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="description" value="@Model.newDescription" style="border:2px solid purple" />
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">Donor</label>
+                    <label class="col-sm-3 col-form-label" style="color:purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Donor</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="donor" value="@Model.newDonor" style="border:2px solid purple" />
                     </div>
