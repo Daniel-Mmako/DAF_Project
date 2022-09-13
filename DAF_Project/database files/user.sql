@@ -7,5 +7,7 @@ CREATE TABLE [db_donations].[dbo].[user] (
 	password VARCHAR(300) NOT NULL,
 );
 
+-- username: admin
+-- password: admin
 INSERT INTO [db_donations].[dbo].[user]
 VALUES ('admin', 'admin', 'admin', 'Employee', 'jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=');
