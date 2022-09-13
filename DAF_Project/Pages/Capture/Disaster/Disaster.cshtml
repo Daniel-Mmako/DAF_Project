@@ -6,7 +6,6 @@
 
 <div class="container-fluid border rounded p-5" style="background-color:orange">
     <h2 style="color:purple">Capture a new disaster</h2>
-    <h3 style="color:purple">use below form to capture new disasters!</h3>
     <div class="row content">
         <div class="col-sm-9">
             <form method="POST">
@@ -32,12 +31,6 @@
                     <label class="col-sm-3 col-form-label" style="color:purple">Description</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="description" value="@Model.newDescription" style="border:2px solid purple" />
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sm-3 col-form-label" style="color:purple">Donation Type</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="type" value="@Model.newType" style="border:2px solid purple" />
                     </div>
                 </div>
                 @if (Model.successMessage.Length > 0)

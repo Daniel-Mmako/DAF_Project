@@ -1,7 +1,10 @@
-﻿@if (Context.Session.GetString("userType") == "Employee" || Context.Session.GetString("userType") == "Non-Employee")
+﻿@if (Context.Session.GetString("userType") == "Employee")
 {
     <form method="post" class="form-inline" asp-page="/Index" asp-page-handler="MyOnClick">
-        <a class="btn btn-link" asp-area="" asp-page="/EmployeeSignUp/EmployeeSignUp">NewProfile</a>
+        @if (Context.Session.GetString("userType") != "Non-Employee")
+        {
+            <a class="btn btn-link" asp-area="" asp-page="/EmployeeSignUp/EmployeeSignUp">NewProfile</a>
+        }
         <button type="submit" class="btn btn-link">Logout</button>
     </form>
     @functions {

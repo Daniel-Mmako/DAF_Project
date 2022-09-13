@@ -18,16 +18,13 @@ namespace DAF_Project.Pages.Login
         public bool checkProfile = false;
         public String successMessage = "";
         public String errorMessage = "";
-
         public LoginModel(db_donationsContext context)
         {
             _context = context;
         }
-
         public void OnGet()
         {
         }
-
         public void OnPost()
         {
             dynamic? user = null;

@@ -39,8 +39,12 @@ namespace DAF_Project.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.Amount)
+                    .HasColumnType("decimal(18, 0)")
+                    .HasColumnName("amount");
+
                 entity.Property(e => e.Description)
-                    .HasMaxLength(200)
+                    .HasMaxLength(150)
                     .IsUnicode(false)
                     .HasColumnName("description");
 
@@ -49,7 +53,7 @@ namespace DAF_Project.Models
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.Location)
-                    .HasMaxLength(150)
+                    .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("location");
 
@@ -95,12 +99,17 @@ namespace DAF_Project.Models
             {
                 entity.ToTable("goods_category");
 
+                entity.HasIndex(e => e.Category, "UQ__goods_ca__F7F53CC26B939A3D")
+                    .IsUnique();
+
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Category)
                     .HasMaxLength(150)
                     .IsUnicode(false)
                     .HasColumnName("category");
+
+                entity.Property(e => e.Sequence).HasColumnName("sequence");
             });
 
             modelBuilder.Entity<Monetary>(entity =>

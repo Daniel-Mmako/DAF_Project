@@ -7,5 +7,6 @@ namespace DAF_Project.Models
     {
         public int Id { get; set; }
         public string Category { get; set; } = null!;
+        public int Sequence { get; set; }
     }
 }

@@ -23,9 +23,10 @@ namespace DAF_Project.Pages.Capture.CaptureGoods
 
         public void OnGet()
         {
-            Options = _context.GoodsCategories.Select(a => new SelectListItem { 
-                                                         Text = a.Category.ToString(),
-                                                      }).ToList();
+            Options = _context.GoodsCategories.Select(a => new SelectListItem
+            {
+                Text = a.Category.ToString(),
+            }).ToList();
         }
         public void OnPost()
         {
@@ -39,7 +40,7 @@ namespace DAF_Project.Pages.Capture.CaptureGoods
                 try
                 {
                     var goodsCategory = new Models.GoodsCategory
-                    { 
+                    {
                         Category = newCategory
                     };
 

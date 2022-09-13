@@ -5,14 +5,14 @@
 }
 
 <div class="container-fluid border rounded p-5" style="background-color:orange">
-    <h2 style="color:purple">Allocate to an active disaster</h2>
+    <h2 style="color:purple">You have a maximum of R @Model.availableAmount to donate</h2>
     <div class="row content">
         <div class="col-sm-9">
             <form method="POST">
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label" style="color:purple">Disaster</label>
                     <div class="col-sm-6">
-                        <select asp-items="Model.Options"></select>
+                        <select name="disaster" asp-items="Model.OptionsDisaster"></select>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -24,7 +24,7 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label" style="color:purple">Goods</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="goods" value="@Model.numOfGoods" style="border:2px solid purple" />
+                        <input type="text" class="form-control" name="goods" value="@Model.description" style="border:2px solid purple" />
                     </div>
                 </div>
                 @if (Model.successMessage.Length > 0)
